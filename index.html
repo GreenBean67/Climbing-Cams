@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Climbing Cam Range Comparison</title>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+  <div id="cam-chart" style="width:90%;height:800px;"></div>
+  <script>
+    const cams = [
+      // Black Diamond Camalot C4
+      { brand: "Black Diamond", model: "C4 0.3", min: 13.8, max: 23.4 },
+      { brand: "Black Diamond", model: "C4 0.4", min: 15.5, max: 26.7 },
+      { brand: "Black Diamond", model: "C4 0.5", min: 19.6, max: 33.5 },
+      { brand: "Black Diamond", model: "C4 0.75", min: 23.9, max: 41.2 },
+      { brand: "Black Diamond", model: "C4 1", min: 30.2, max: 52.1 },
+      { brand: "Black Diamond", model: "C4 2", min: 37.2, max: 64.9 },
+      { brand: "Black Diamond", model: "C4 3", min: 50.7, max: 87.9 },
+      { brand: "Black Diamond", model: "C4 4", min: 66.0, max: 114.7 },
+      { brand: "Black Diamond", model: "C4 5", min: 52.4, max: 148.5 },
+      { brand: "Black Diamond", model: "C4 6", min: 114.1, max: 195 },
+
+      // DMM Dragons
+      { brand: "DMM", model: "Dragon 00", min: 13.6, max: 22.5 },
+      { brand: "DMM", model: "Dragon 0", min: 16, max: 26.7 },
+      { brand: "DMM", model: "Dragon 1", min: 20, max: 33 },
+      { brand: "DMM", model: "Dragon 2", min: 24, max: 41 },
+      { brand: "DMM", model: "Dragon 3", min: 29, max: 50 },
+      { brand: "DMM", model: "Dragon 4", min: 38, max: 64 },
+      { brand: "DMM", model: "Dragon 5", min: 50, max: 85 },
+      { brand: "DMM", model: "Dragon 6", min: 68, max: 114 }
+    ];
+
+    const trace = {
+      type: "bar",
+      orientation: "h",
+      x: cams.map(c => c.max - c.min),
+      y: cams.map(c => c.model),
+      base: cams.map(c => c.min),
+      text: cams.map(c => `${c.min}-${c.max} mm`),
+      hoverinfo: "text+name",
+      marker: {
+        color: cams.map(c => c.brand === "Black Diamond" ? "steelblue" : "orange")
+      },
+      name: cams.map(c => c.brand)
+    };
+
+    const layout = {
+      title: "Climbing Cam Range Comparison: BD C4 vs DMM Dragons",
+      barmode: 'group',
+      xaxis: { title: "Range (mm)" },
+      yaxis: { automargin: true }
+    };
+
+    Plotly.newPlot("cam-chart", [trace], layout);
+  </script>
+</body>
+</html>
