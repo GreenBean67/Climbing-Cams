@@ -10,36 +10,36 @@
   <script>
     const cams = [
       // Black Diamond Camalot C4
-     { brand: "Black Diamond C4", model: "0.3", min: 14.8, max: 21.0 },
-     { brand: "Black Diamond C4", model: "0.4", min: 16.6, max: 23.8 },
-     { brand: "Black Diamond C4", model: "0.5", min: 20.7, max: 29.8 },
-     { brand: "Black Diamond C4", model: "0.75", min: 25.2, max: 36.2 },
-     { brand: "Black Diamond C4", model: "1", min: 32.3, max: 45.7 },
-     { brand: "Black Diamond C4", model: "2", min: 40.6, max: 57.2 },
-     { brand: "Black Diamond C4", model: "3", min: 54.4, max: 77.5 },
-     { brand: "Black Diamond C4", model: "4", min: 70.9, max: 102.4 },
-     { brand: "Black Diamond C4", model: "5", min: 91.9, max: 132.7 },
-     { brand: "Black Diamond C4", model: "6", min: 128.0, max: 175.4 },
-     { brand: "Black Diamond C4", model: "7", min: 160.3, max: 227.5 },
-     { brand: "Black Diamond C4", model: "8", min: 205.8, max: 289.2 },
+     { brand: "Black Diamond C4", model: "0.3", min: 14.8, max: 21.0, color: "blue" },
+     { brand: "Black Diamond C4", model: "0.4", min: 16.6, max: 23.8, color: "gray" },
+     { brand: "Black Diamond C4", model: "0.5", min: 20.7, max: 29.8, color: "purple" },
+     { brand: "Black Diamond C4", model: "0.75", min: 25.2, max: 36.2, color: "green" },
+     { brand: "Black Diamond C4", model: "1", min: 32.3, max: 45.7, color: "red" },
+     { brand: "Black Diamond C4", model: "2", min: 40.6, max: 57.2, color: "gold" },
+     { brand: "Black Diamond C4", model: "3", min: 54.4, max: 77.5, color: "blue" },
+     { brand: "Black Diamond C4", model: "4", min: 70.9, max: 102.4, color: "gray },
+     { brand: "Black Diamond C4", model: "5", min: 91.9, max: 132.7, color: "purple" },
+     { brand: "Black Diamond C4", model: "6", min: 128.0, max: 175.4, color: "green" },
+     { brand: "Black Diamond C4", model: "7", min: 160.3, max: 227.5, color: "red" },
+     { brand: "Black Diamond C4", model: "8", min: 205.8, max: 289.2, color: "gold" },
 
       // Black Diamond Camalot C4 Ultralight
-     { brand: "Black Diamond C4 Ultralight", model: "0.4", min: 16.6, max: 23.8 },
-     { brand: "Black Diamond C4 Ultralight", model: "0.5", min: 20.7, max: 29.8 },
-     { brand: "Black Diamond C4 Ultralight", model: "0.75", min: 25.2, max: 36.2 },
-     { brand: "Black Diamond C4 Ultralight", model: "1", min: 32.3, max: 45.7 },
-     { brand: "Black Diamond C4 Ultralight", model: "2", min: 40.6, max: 57.2 },
-     { brand: "Black Diamond C4 Ultralight", model: "3", min: 54.4, max: 77.5 },
-     { brand: "Black Diamond C4 Ultralight", model: "4", min: 70.9, max: 102.4 },
+     { brand: "Black Diamond C4 Ultralight", model: "0.4", min: 16.6, max: 23.8, color: "gray" },
+     { brand: "Black Diamond C4 Ultralight", model: "0.5", min: 20.7, max: 29.8, color: "pruple" },
+     { brand: "Black Diamond C4 Ultralight", model: "0.75", min: 25.2, max: 36.2, color: "green" },
+     { brand: "Black Diamond C4 Ultralight", model: "1", min: 32.3, max: 45.7, color: "red" },
+     { brand: "Black Diamond C4 Ultralight", model: "2", min: 40.6, max: 57.2, color: "gold" },
+     { brand: "Black Diamond C4 Ultralight", model: "3", min: 54.4, max: 77.5, color: "blue" },
+     { brand: "Black Diamond C4 Ultralight", model: "4", min: 70.9, max: 102.4, color: "gray" },
       
       // Black Diamond Camalot Z4
       { brand: "Black Diamond Z4", model: "0", min: 7.9, max: 9.7 },
       { brand: "Black Diamond Z4", model: "0.1", min: 9.3, max: 11.3 },
       { brand: "Black Diamond Z4", model: "0.2", min: 11, max: 13.4 },
-      { brand: "Black Diamond Z4", model: "0.3", min: 13.4, max: 20.1 },
-      { brand: "Black Diamond Z4", model: "0.4", min: 16.5, max: 24.6 },
-      { brand: "Black Diamond Z4", model: "0.5", min: 20.3, max: 30.1 },
-      { brand: "Black Diamond Z4", model: "0.75", min: 25, max: 37.4 },
+      { brand: "Black Diamond Z4", model: "0.3", min: 13.4, max: 20.1, color: "blue" },
+      { brand: "Black Diamond Z4", model: "0.4", min: 16.5, max: 24.6, color: "gray" },
+      { brand: "Black Diamond Z4", model: "0.5", min: 20.3, max: 30.1, color: "purple" },
+      { brand: "Black Diamond Z4", model: "0.75", min: 25, max: 37.4, color: "green" },
 
       // Metolius Ultralight Power Cams
       { brand: "Metolius Ultralight Power Cams", model: "00", min: 8.5, max: 12.0 },
@@ -166,6 +166,10 @@
   // Hover text stays detailed with the range
   hovertext: cams.map(c => `${c.brand} ${c.model}<br>${c.min}–${c.max} mm`),
   hoverinfo: "text",
+
+   marker: {
+    color: cams.map(c => c.brand === "Black Diamond" ? "steelblue" : "orange")
+  }
 };
 
 
