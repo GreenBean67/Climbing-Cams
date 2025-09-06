@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -10,26 +10,145 @@
   <script>
     const cams = [
       // Black Diamond Camalot C4
-      { brand: "Black Diamond", model: "C4 0.3", min: 13.8, max: 23.4 },
-      { brand: "Black Diamond", model: "C4 0.4", min: 15.5, max: 26.7 },
-      { brand: "Black Diamond", model: "C4 0.5", min: 19.6, max: 33.5 },
-      { brand: "Black Diamond", model: "C4 0.75", min: 23.9, max: 41.2 },
-      { brand: "Black Diamond", model: "C4 1", min: 30.2, max: 52.1 },
-      { brand: "Black Diamond", model: "C4 2", min: 37.2, max: 64.9 },
-      { brand: "Black Diamond", model: "C4 3", min: 50.7, max: 87.9 },
-      { brand: "Black Diamond", model: "C4 4", min: 66.0, max: 114.7 },
-      { brand: "Black Diamond", model: "C4 5", min: 52.4, max: 148.5 },
-      { brand: "Black Diamond", model: "C4 6", min: 114.1, max: 195 },
+     { brand: "Black Diamond C4", model: "0.3", min: 14.8, max: 21.0 },
+     { brand: "Black Diamond C4", model: "0.4", min: 16.6, max: 23.8 },
+     { brand: "Black Diamond C4", model: "0.5", min: 20.7, max: 29.8 },
+     { brand: "Black Diamond C4", model: "0.75", min: 25.2, max: 36.2 },
+     { brand: "Black Diamond C4", model: "1", min: 32.3, max: 45.7 },
+     { brand: "Black Diamond C4", model: "2", min: 40.6, max: 57.2 },
+     { brand: "Black Diamond C4", model: "3", min: 54.4, max: 77.5 },
+     { brand: "Black Diamond C4", model: "4", min: 70.9, max: 102.4 },
+     { brand: "Black Diamond C4", model: "5", min: 91.9, max: 132.7 },
+     { brand: "Black Diamond C4", model: "6", min: 128.0, max: 175.4 },
+     { brand: "Black Diamond C4", model: "7", min: 160.3, max: 227.5 },
+     { brand: "Black Diamond C4", model: "8", min: 205.8, max: 289.2 },
 
-      // DMM Dragons
-      { brand: "DMM", model: "Dragon 00", min: 13.6, max: 22.5 },
-      { brand: "DMM", model: "Dragon 0", min: 16, max: 26.7 },
-      { brand: "DMM", model: "Dragon 1", min: 20, max: 33 },
-      { brand: "DMM", model: "Dragon 2", min: 24, max: 41 },
-      { brand: "DMM", model: "Dragon 3", min: 29, max: 50 },
-      { brand: "DMM", model: "Dragon 4", min: 38, max: 64 },
-      { brand: "DMM", model: "Dragon 5", min: 50, max: 85 },
-      { brand: "DMM", model: "Dragon 6", min: 68, max: 114 }
+      // Black Diamond Camalot C4 Ultralight
+     { brand: "Black Diamond C4 Ultralight", model: "0.4", min: 16.6, max: 23.8 },
+     { brand: "Black Diamond C4 Ultralight", model: "0.5", min: 20.7, max: 29.8 },
+     { brand: "Black Diamond C4 Ultralight", model: "0.75", min: 25.2, max: 36.2 },
+     { brand: "Black Diamond C4 Ultralight", model: "1", min: 32.3, max: 45.7 },
+     { brand: "Black Diamond C4 Ultralight", model: "2", min: 40.6, max: 57.2 },
+     { brand: "Black Diamond C4 Ultralight", model: "3", min: 54.4, max: 77.5 },
+     { brand: "Black Diamond C4 Ultralight", model: "4", min: 70.9, max: 102.4 },
+      
+      // Black Diamond Camalot Z4
+      { brand: "Black Diamond Z4", model: "0", min: 7.9, max: 9.7 },
+      { brand: "Black Diamond Z4", model: "0.1", min: 9.3, max: 11.3 },
+      { brand: "Black Diamond Z4", model: "0.2", min: 11, max: 13.4 },
+      { brand: "Black Diamond Z4", model: "0.3", min: 13.4, max: 20.1 },
+      { brand: "Black Diamond Z4", model: "0.4", min: 16.5, max: 24.6 },
+      { brand: "Black Diamond Z4", model: "0.5", min: 20.3, max: 30.1 },
+      { brand: "Black Diamond Z4", model: "0.75", min: 25, max: 37.4 },
+
+      // Metolius Ultralight Power Cams
+      { brand: "Metolius Ultralight Power Cams", model: "00", min: 8.5, max: 12.0 },
+      { brand: "Metolius Ultralight Power Cams", model: "0", min: 10.0, max: 15.0 },
+      { brand: "Metolius Ultralight Power Cams", model: "1", min: 12.5, max: 18.0 },
+      { brand: "Metolius Ultralight Power Cams", model: "2", min: 15.5, max: 22.5 },
+      { brand: "Metolius Ultralight Power Cams", model: "3", min: 18.5, max: 26.5 },
+      { brand: "Metolius Ultralight Power Cams", model: "4", min: 23.5, max: 33.5 },
+      { brand: "Metolius Ultralight Power Cams", model: "5", min: 28.0, max: 39.5 },
+      { brand: "Metolius Ultralight Power Cams", model: "6", min: 32.5, max: 48.0 },
+      { brand: "Metolius Ultralight Power Cams", model: "7", min: 40.0, max: 57.5 },
+      { brand: "Metolius Ultralight Power Cams", model: "8", min: 48.5, max: 71.5 },
+
+      //Metolius Ultralight Master Cams
+      { brand: "Metolius Ultralight Master Cams", model: "00", min: 8.5, max: 12.0 },
+      { brand: "Metolius Ultralight Master Cams", model: "0", min: 10.0, max: 15.0 },
+      { brand: "Metolius Ultralight Master Cams", model: "1", min: 12.5, max: 18.0 },
+      { brand: "Metolius Ultralight Master Cams", model: "2", min: 15.5, max: 22.5 },
+      { brand: "Metolius Ultralight Master Cams", model: "3", min: 18.5, max: 26.5 },
+      { brand: "Metolius Ultralight Master Cams", model: "4", min: 23.5, max: 33.5 },
+      { brand: "Metolius Ultralight Master Cams", model: "5", min: 28.0, max: 39.5 },
+      { brand: "Metolius Ultralight Master Cams", model: "6", min: 32.5, max: 48.0 },
+      { brand: "Metolius Ultralight Master Cams", model: "7", min: 40.0, max: 57.5 },
+      { brand: "Metolius Ultralight Master Cams", model: "8", min: 48.5, max: 71.5 },
+      
+      //Metolius Ultralight Fat Cams
+      { brand: "Metolius Ultralight Fat Cams", model: "2", min: 15.5, max: 22.5 },
+      { brand: "Metolius Ultralight Fat Cams", model: "3", min: 18.5, max: 26.5 },
+      { brand: "Metolius Ultralight Fat Cams", model: "4", min: 23.5, max: 33.5 },
+      { brand: "Metolius Ultralight Fat Cams", model: "5", min: 28.0, max: 39.5 },
+      { brand: "Metolius Ultralight Fat Cams", model: "6", min: 32.5, max: 48.0 },
+      { brand: "Metolius Ultralight Fat Cams", model: "7", min: 40.0, max: 57.5 },
+      { brand: "Metolius Ultralight Fat Cams", model: "8", min: 48.5, max: 71.5 },
+      
+      // Metolius Ultralight TCU
+      { brand: "Metolius Ultralight TCU", model: "00", min: 8.5, max: 12.0 },
+      { brand: "Metolius Ultralight TCU", model: "0", min: 10.0, max: 15.0 },
+      { brand: "Metolius Ultralight TCU", model: "1", min: 12.5, max: 18.0 },
+      { brand: "Metolius Ultralight TCU", model: "2", min: 15.5, max: 22.5 },
+      { brand: "Metolius Ultralight TCU", model: "3", min: 18.5, max: 26.5 },
+      { brand: "Metolius Ultralight TCU", model: "4", min: 23.5, max: 33.5 },
+
+      // Metolius Supercam
+      { brand: "Metolius Supercam", model: "Small", min: 42.0, max: 63.4 },
+      { brand: "Metolius Supercam", model: "Medium", min: 52.5, max: 91.5},
+      { brand: "Metolius Supercam", model: "Large", min: 66.5, max: 118.5 },
+
+      // Wild Country Friend
+      { brand: "Wild Country Friend", model: "0.4", min: 15.8, max: 26.4 }
+      { brand: "Wild Country Friend", model: "0.5", min: 20.6, max: 34.5 }
+      { brand: "Wild Country Friend", model: "0.75", min: 25.8, max: 40.3 }
+      { brand: "Wild Country Friend", model: "1", min: 31.7, max: 53.6 }
+      { brand: "Wild Country Friend", model: "2", min: 41.5, max: 69.3 }
+      { brand: "Wild Country Friend", model: "3", min: 52.7, max: 88.0 }
+      { brand: "Wild Country Friend", model: "4", min: 66.8, max: 112.1 }
+
+      // Wild Country Zero Friend
+      { brand: "Wild Country Zero Friend", model: "0.1", min: 8.5, max: 13.2 }
+      { brand: "Wild Country Zero Friend", model: "0.2", min: 10.4, max: 15.7 }
+      { brand: "Wild Country Zero Friend", model: "0.3", min: 13.8, max: 22.3 }
+      { brand: "Wild Country Zero Friend", model: "0.4", min: 15.8, max: 25.9 }
+      { brand: "Wild Country Zero Friend", model: "0.5", min: 20.2, max: 32.9 }
+      { brand: "Wild Country Zero Friend", model: "0.75", min: 25.4, max: 40.1 }
+
+      // DMM Dragon
+      { brand: "DMM Dragon", model: "00", min: 13, max: 21 }
+      { brand: "DMM Dragon", model: "0", min: 16, max: 25 }
+      { brand: "DMM Dragon", model: "1", min: 20, max: 33 }
+      { brand: "DMM Dragon", model: "2", min: 24, max: 41 }
+      { brand: "DMM Dragon", model: "3", min: 29, max: 50 }
+      { brand: "DMM Dragon", model: "4", min: 38, max: 64 }
+      { brand: "DMM Dragon", model: "5", min: 50, max: 85 }
+      { brand: "DMM Dragon", model: "6", min: 68, max: 114 }
+      { brand: "DMM Dragon", model: "7", min: 88, max: 149 }
+      { brand: "DMM Dragon", model: "8", min: 116, max: 195 }
+
+      // DMM Dragonfly
+      { brand: "DMM Dragonfly", model: "1", min: 7.8, max: 11.5 }
+      { brand: "DMM Dragonfly", model: "2", min: 8.7, max: 13.7 }
+      { brand: "DMM Dragonfly", model: "3", min: 10.7, max: 14.8 }
+      { brand: "DMM Dragonfly", model: "4", min: 12.3, max: 17.9 }
+      { brand: "DMM Dragonfly", model: "5", min: 15.1, max: 21.8 }
+      { brand: "DMM Dragonfly", model: "6", min: 18.9, max: 28.9 }
+
+      // Trango Flex
+      { brand: "Trango Flex", model: "1", min: 11, max: 17 }
+      { brand: "Trango Flex", model: "2", min: 15, max: 21 }
+      { brand: "Trango Flex", model: "3", min: 19, max: 27 }
+      { brand: "Trango Flex", model: "4", min: 24, max: 33 }
+      { brand: "Trango Flex", model: "5", min: 27, max: 43 }
+      { brand: "Trango Flex", model: "6", min: 34, max: 55 }
+      { brand: "Trango Flex", model: "7", min: 44, max: 68 }
+      { brand: "Trango Flex", model: "8", min: 53, max: 86 }
+      { brand: "Trango Flex", model: "9", min: 63, max: 107 }
+      { brand: "Trango Flex", model: "10", min: 81, max: 134 }
+
+      // Totem
+      { brand: "Totem", model: "0.50", min: 11.7, max: 18.9 }
+      { brand: "Totem", model: "0.65", min: 13.8, max: 22.5 }
+      { brand: "Totem", model: "0.80", min: 17, max: 27.7 }
+      { brand: "Totem", model: "1.00", min: 20.9, max: 34.2 }
+      { brand: "Totem", model: "1.25", min: 25.7, max: 42.3 }
+      { brand: "Totem", model: "1.50", min: 31.6, max: 52.2 }
+      { brand: "Totem", model: "1.80", min: 39.7, max: 64.2 }
+
+      // AlternativeCurrent Angel Cam
+      { brand: "AlternativeCurrent Angel Cam", model: "1", min: 26, max: 100}
+      { brand: "AlternativeCurrent Angel Cam", model: "1", min: 46, max: 145}  
+    
     ];
 
     const trace = {
