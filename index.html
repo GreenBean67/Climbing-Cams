@@ -33,25 +33,26 @@
     ];
 
     const trace = {
-      type: "bar",
-      orientation: "h",
-      x: cams.map(c => c.max - c.min),
-      y: cams.map(c => c.model),
-      base: cams.map(c => c.min),
-      text: cams.map(c => `${c.min}-${c.max} mm`),
-      hoverinfo: "text+name",
-      marker: {
-        color: cams.map(c => c.brand === "Black Diamond" ? "steelblue" : "orange")
-      },
-      name: cams.map(c => c.brand)
-    };
+  type: "bar",
+  orientation: "h",
+  x: cams.map(c => c.max - c.min),
+  y: cams.map(c => c.model),
+  base: cams.map(c => c.min),
+  
+  // Text that will be drawn on the bars
+  text: cams.map(c => `${c.brand} ${c.model}`),
+  textposition: "inside",    // put labels inside the bars
+  insidetextanchor: "start", // align labels at the left edge of the bar
+  
+  // Hover text stays detailed with the range
+  hovertext: cams.map(c => `${c.brand} ${c.model}<br>${c.min}–${c.max} mm`),
+  hoverinfo: "text",
 
-    const layout = {
-      title: "Climbing Cam Range Comparison: BD C4 vs DMM Dragons",
-      barmode: 'group',
-      xaxis: { title: "Range (mm)" },
-      yaxis: { automargin: true }
-    };
+  marker: {
+    color: cams.map(c => c.brand === "Black Diamond" ? "steelblue" : "orange")
+  }
+};
+
 
     Plotly.newPlot("cam-chart", [trace], layout);
   </script>
