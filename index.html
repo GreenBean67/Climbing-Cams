@@ -10,36 +10,36 @@
   <script>
     const cams = [
       // Black Diamond Camalot C4
-      { brand: "Black Diamond C4", model: "0.3", min: 14.8, max: 21.0, color: "blue" },
-      { brand: "Black Diamond C4", model: "0.4", min: 16.6, max: 23.8, color: "gray" },
-      { brand: "Black Diamond C4", model: "0.5", min: 20.7, max: 29.8, color: "purple" },
-      { brand: "Black Diamond C4", model: "0.75", min: 25.2, max: 36.2, color: "green" },
-      { brand: "Black Diamond C4", model: "1", min: 32.3, max: 45.7, color: "red" },
-      { brand: "Black Diamond C4", model: "2", min: 40.6, max: 57.2, color: "gold" },
-      { brand: "Black Diamond C4", model: "3", min: 54.4, max: 77.5, color: "blue" },
-      { brand: "Black Diamond C4", model: "4", min: 70.9, max: 102.4, color: "gray" },
-      { brand: "Black Diamond C4", model: "5", min: 91.9, max: 132.7, color: "purple" },
-      { brand: "Black Diamond C4", model: "6", min: 128.0, max: 175.4, color: "green" },
-      { brand: "Black Diamond C4", model: "7", min: 160.3, max: 227.5, color: "red" },
-      { brand: "Black Diamond C4", model: "8", min: 205.8, max: 289.2, color: "gold" },
+      { brand: "Black Diamond C4", model: "0.3", min: 14.8, max: 21.0, color: "blue", weight: 70, strength: 8 },
+      { brand: "Black Diamond C4", model: "0.4", min: 16.6, max: 23.8, color: "gray", weight: 78, strenght: 9 },
+      { brand: "Black Diamond C4", model: "0.5", min: 20.7, max: 29.8, color: "purple", weight: 93, strength: 12 },
+      { brand: "Black Diamond C4", model: "0.75", min: 25.2, max: 36.2, color: "green", weight: 108, strength: 12 },
+      { brand: "Black Diamond C4", model: "1", min: 32.3, max: 45.7, color: "red", weight: 124, strength: 12 },
+      { brand: "Black Diamond C4", model: "2", min: 40.6, max: 57.2, color: "gold", weight: 140, strength: 12 },
+      { brand: "Black Diamond C4", model: "3", min: 54.4, max: 77.5, color: "blue", weight: 181, strength: 12 },
+      { brand: "Black Diamond C4", model: "4", min: 70.9, max: 102.4, color: "gray", weight: 258, strength: 14 },
+      { brand: "Black Diamond C4", model: "5", min: 91.9, max: 132.7, color: "purple" weight: 348, strength: 14 },
+      { brand: "Black Diamond C4", model: "6", min: 128.0, max: 175.4, color: "green", weight: 530, strength: 14 },
+      { brand: "Black Diamond C4", model: "7", min: 160.3, max: 227.5, color: "red", weight: 709, strength: 8 },
+      { brand: "Black Diamond C4", model: "8", min: 205.8, max: 289.2, color: "gold", weight: 965, strength: 14 },
 
       // Black Diamond Camalot C4 Ultralight
-      { brand: "Black Diamond C4 Ultralight", model: "0.4", min: 16.6, max: 23.8, color: "gray" },
-      { brand: "Black Diamond C4 Ultralight", model: "0.5", min: 20.7, max: 29.8, color: "purple" },
-      { brand: "Black Diamond C4 Ultralight", model: "0.75", min: 25.2, max: 36.2, color: "green" },
-      { brand: "Black Diamond C4 Ultralight", model: "1", min: 32.3, max: 45.7, color: "red" },
-      { brand: "Black Diamond C4 Ultralight", model: "2", min: 40.6, max: 57.2, color: "gold" },
-      { brand: "Black Diamond C4 Ultralight", model: "3", min: 54.4, max: 77.5, color: "blue" },
-      { brand: "Black Diamond C4 Ultralight", model: "4", min: 70.9, max: 102.4, color: "gray" },
+      { brand: "Black Diamond C4 Ultralight", model: "0.4", min: 16.6, max: 23.8, color: "gray", weight: 61, strength: 8 },
+      { brand: "Black Diamond C4 Ultralight", model: "0.5", min: 20.7, max: 29.8, color: "purple", weight: 74, strength: 10 },
+      { brand: "Black Diamond C4 Ultralight", model: "0.75", min: 25.2, max: 36.2, color: "green", weight: 89, strength: 12 },
+      { brand: "Black Diamond C4 Ultralight", model: "1", min: 32.3, max: 45.7, color: "red", weight: 101, strength: 12 },
+      { brand: "Black Diamond C4 Ultralight", model: "2", min: 40.6, max: 57.2, color: "gold", weight: 126, strength: 12 },
+      { brand: "Black Diamond C4 Ultralight", model: "3", min: 54.4, max: 77.5, color: "blue", weight: 167, strength: 12 },
+      { brand: "Black Diamond C4 Ultralight", model: "4", min: 70.9, max: 102.4, color: "gray", weight: 225, strength: 12 },
 
       // Black Diamond Camalot Z4
-      { brand: "Black Diamond Z4", model: "0", min: 7.9, max: 9.7, color: "green" },
-      { brand: "Black Diamond Z4", model: "0.1", min: 9.3, max: 11.3, color: "red" },
-      { brand: "Black Diamond Z4", model: "0.2", min: 11.0, max: 13.4, color: "gold" },
-      { brand: "Black Diamond Z4", model: "0.3", min: 13.4, max: 20.1, color: "blue" },
-      { brand: "Black Diamond Z4", model: "0.4", min: 16.5, max: 24.6, color: "gray" },
-      { brand: "Black Diamond Z4", model: "0.5", min: 20.3, max: 30.1, color: "purple" },
-      { brand: "Black Diamond Z4", model: "0.75", min: 25.0, max: 37.4, color: "green" },
+      { brand: "Black Diamond Z4", model: "0", min: 7.9, max: 9.7, color: "green", weight: 44, strength: 5 },
+      { brand: "Black Diamond Z4", model: "0.1", min: 9.3, max: 11.3, color: "red", weight: 45, strength: 5 },
+      { brand: "Black Diamond Z4", model: "0.2", min: 11.0, max: 13.4, color: "gold", weight: 48, strength: 6 },
+      { brand: "Black Diamond Z4", model: "0.3", min: 13.4, max: 20.1, color: "blue", weight: 55, strength: 8 },
+      { brand: "Black Diamond Z4", model: "0.4", min: 16.5, max: 24.6, color: "gray", weight: 61, strength: 9 },
+      { brand: "Black Diamond Z4", model: "0.5", min: 20.3, max: 30.1, color: "purple", weight: 78, strength: 10 },
+      { brand: "Black Diamond Z4", model: "0.75", min: 25.0, max: 37.4, color: "green", weight: 93, strength: 10 },
 
       // Trango Big Bro
       { brand: "Trango", model: "Big Bro 1", min: 81, max: 109, color: "red" }
@@ -166,7 +166,7 @@
       { brand: "Trango Flex", model: "9", min: 63, max: 107, color: "gray" },
       { brand: "Trango Flex", model: "10", min: 81, max: 134, color: "purple" },
 
-          // Totem
+      // Totem
       { brand: "Totem", model: "0.50", min: 11.7, max: 18.9, color: "black" },
       { brand: "Totem", model: "0.65", min: 13.8, max: 22.5, color: "blue" },
       { brand: "Totem", model: "0.80", min: 17.0, max: 27.7, color: "gold" },
